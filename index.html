@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>FLA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+			<div id="header">
+				<span class="logo icon fa-paper-plane"></span>
+				<h1>Formal Language and Automata</h1>
+				<p><a href="https://web.stanford.edu/class/archive/cs/cs103/cs103.1156/tools/cfg/">CFG Developer</a>
+				<br />
+				<a href="https://www.autodraw.com/">Auto Draw</a>.</p>
+			</div>
+
+			<div id="main">
+
+				<header class="major container medium">
+					<h2>Introduction of Finite Automata
+					</h2>
+					<br/>
+					<h4>Finite Automata(FA) is the simplest machine to recognize patterns.The finite automata or finite state machine is an abstract machine which have five elements or tuple. It has a set of states and rules for moving from one state to another but it depends upon the applied input symbol. Basically it is an abstract model of digital computer. Following figure shows some essential features of a general automation.
+					</h4>
+					<a href="https://www.geeksforgeeks.org/introduction-of-finite-automata/" class="image icon solid fa-signal"><img src="images/fa.jpg" alt="" /></a>
+					<h4>The above figure shows following features of automata:
+
+Input,
+Output,
+States of automata,
+State relation,
+Output relation. </h4>
+				</header>
+
+				<div class="box alt container">
+					<section class="feature left">
+						<a href="https://www.tutorialspoint.com/automata_theory/deterministic_finite_automaton.htm"class="image icon solid fa-signal"><img src="images/dfa.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Deterministic Finite Automaton (DFA)</h3>
+							<p>In DFA, for each input symbol, one can determine the state to which the machine will move. Hence, it is called Deterministic Automaton. As it has a finite number of states, the machine is called Deterministic Finite Machine or Deterministic Finite Automaton.</div>
+					</section>
+					<section class="feature right">
+						<a href="https://www.javatpoint.com/non-deterministic-finite-automata" class="image icon solid fa-code"><img src="images/nfa.jpg" alt="" /></a>
+						<div class="content">
+							<h3>NFA (Non-Deterministic finite automata)</h3>
+							<p>NFA stands for non-deterministic finite automata. It is easy to construct an NFA than DFA for a given regular language.
+The finite automata are called NFA when there exist many paths for specific input from the current state to the next state.
+Every NFA is not DFA, but each NFA can be translated into DFA.
+NFA is defined in the same way as DFA but with the following two exceptions, it contains multiple next states, and it contains ε transition.</div>
+					</section>
+					<section class="feature left">
+						<a href="https://www.tutorialspoint.com/automata_theory/context_free_grammar_introduction.htm" class="image icon solid fa-mobile-alt"><img src="images/cfa.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Context-Free Grammar</h3>
+							<p>A context-free grammar (CFG) consisting of a finite set of grammar rules is a quadruple (N, T, P, S) where
+
+N is a set of non-terminal symbols.
+
+T is a set of terminals where N ∩ T = NULL.
+
+P is a set of rules, P: N → (N ∪ T)*, i.e., the left-hand side of the production rule P does have any right context or left context.
+
+S is the start symbol.</div>
+					</section>
+					<section class="feature right">
+						<a href="https://www.javatpoint.com/automata-chomskys-normal-form" class="image icon solid fa-code"><img src="images/cnf.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Chomsky's Normal Form (CNF)</h3>
+							<p>CNF stands for Chomsky normal form. A CFG(context free grammar) is in CNF(Chomsky normal form) if all production rules satisfy one of the following conditions:
+
+Start symbol generating ε. For example, A → ε.
+A non-terminal generating two non-terminals. For example, S → AB.
+A non-terminal generating a terminal. For example, S → a.</div>
+					</section>
+					<section class="feature left">
+						<a href="https://www.javatpoint.com/automata-greibach-normal-form" class="image icon solid fa-signal"><img src="images/gnf.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Greibach Normal Form (GNF)</h3>
+							<p>GNF stands for Greibach normal form. A CFG(context free grammar) is in GNF(Greibach normal form) if all the production rules satisfy one of the following conditions:
+
+A start symbol generating ε. For example, S → ε.
+A non-terminal generating a terminal. For example, A → a.
+A non-terminal generating a terminal which is followed by any number of non-terminals. For example, S → aASB.</div>
+					</section>
+					<section class="feature right">
+						<a href="https://www.geeksforgeeks.org/introduction-of-pushdown-automata/?ref=rp" class="image icon solid fa-code"><img src="images/push.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Pushdown Automata</h3>
+							<p>A Pushdown Automata (PDA) can be defined as :
+
+Q is the set of states
+∑is the set of input symbols
+Γ is the set of pushdown symbols (which can be pushed and popped from stack)
+q0 is the initial state
+Z is the initial pushdown symbol (which is initially present in stack)
+F is the set of final states
+δ is a transition function which maps Q x {Σ ∪ ∈} x Γ into Q x Γ*. In a given state, PDA will read input symbol and stack symbol (top of the stack) and move to a new state and change the symbol of stack.</div>
+					</section>
+					<section class="feature left">
+						<a href="https://www.javatpoint.com/non-deterministic-pushdown-automata#:~:text=The%20non%2Ddeterministic%20pushdown%20automata,NPDA%20and%20not%20by%20DPDA." class="image icon solid fa-mobile-alt"><img src="images/ndpa.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Non-deterministic Pushdown Automata</h3>
+							<p>The non-deterministic pushdown automata is very much similar to NFA. We will discuss some CFGs which accepts NPDA.
+
+The CFG which accepts deterministic PDA accepts non-deterministic PDAs as well. Similarly, there are some CFGs which can be accepted only by NPDA and not by DPDA. Thus NPDA is more powerful than DPDA.</div>
+					</section>
+					<section class="feature right">
+						<a href="https://www.javatpoint.com/automata-cfg-to-pda-conversion" class="image icon solid fa-code"><img src="images/cfgtopda.jpg" alt="" /></a>
+						<div class="content">
+							<h3>CFG to PDA Conversion</h3>
+							<p>The first symbol on R.H.S. production must be a terminal symbol. The following steps are used to obtain PDA from CFG is:
+
+Step 1: Convert the given productions of CFG into GNF.
+
+Step 2: The PDA will only have one state {q}.
+
+Step 3: The initial symbol of CFG will be the initial symbol in the PDA.
+
+Step 4: For non-terminal symbol, add the following rule:
+
+δ(q, ε, A) = (q, α)  
+Where the production rule is A → α
+
+Step 5: For each terminal symbols, add the following rule:</div>
+					</section>
+					<section class="feature left">
+						<a href="https://www.javatpoint.com/automata-turing-machine" class="image icon solid fa-signal"><img src="images/tm.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Turing Machine</h3>
+							<p>It has an external memory which remembers arbitrary long sequence of input.
+It has unlimited memory capability.
+The model has a facility by which the input at left or right on the tape can be read easily.
+The machine can produce a certain output based on its input. Sometimes it may be required that the same input has to be used to generate the output. So in this machine, the distinction between input and output has been removed. Thus a common set of alphabets can be used for the Turing machine.</div>
+					</section>
+					<section class="feature right">
+						<a href="https://www.javatpoint.com/introduction-to-undecidability" class="image icon solid fa-code"><img src="images/un.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Introduction to Undecidability</h3>
+							<p>In the theory of computation, we often come across such problems that are answered either 'yes' or 'no'. The class of problems which can be answered as 'yes' are called solvable or decidable. Otherwise, the class of problems is said to be unsolvable or undecidable.</div>
+					</section>
+					<section class="feature left">
+						<a href="https://www.tutorialspoint.com/automata_theory/rice_theorem.htm" class="image icon solid fa-mobile-alt"><img src="images/rt.jpg" alt="" /></a>
+						<div class="content">
+							<h3>Rice Theorem</h3>
+							<p>Rice theorem states that any non-trivial semantic property of a language which is recognized by a Turing machine is undecidable. A property, P, is the language of all Turing machines that satisfy that property.</div>
+					</section>
+					<section class="feature right">
+						<a href="https://www.geeksforgeeks.org/np-completeness-set-1/" class="image icon solid fa-code"><img src="images/np.jpg" alt="" /></a>
+						<div class="content">
+							<h3>NP-Completeness</h3>
+							<p>NP complete problems are problems whose status is unknown. No polynomial time algorithm has yet been discovered for any NP complete problem, nor has anybody yet been able to prove that no polynomial-time algorithm exist for any of them. The interesting part is, if any one of the NP complete problems can be solved in polynomial time, then all of them can be solved.</div>
+					</section>
+				</div>
+
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container medium">
+
+					<header class="major last">
+						<h2>Created by:</h2>
+					</header>
+
+					<p>Sayan Saha 
+					<br/>
+					Vighnesh Anand
+					<br/>
+					Manish Kumar
+					<br/>
+					Samvartika Mishra
+					<br/>
+					Moinak Roy</p>
+
+					
+
+					<ul class="icons">
+						<li><a href="https://github.com/sayansahalegacy" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://github.com/vighneshanand" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://github.com/Manish477" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://github.com/samvartikamishra" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="https://github.com/MoinakRoy" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					</ul>
+
+					
+
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
